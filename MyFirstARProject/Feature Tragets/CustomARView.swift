@@ -6,6 +6,7 @@
 //
 
 import ARKit
+import Combine
 import RealityKit
 import SwiftUI
 
@@ -20,12 +21,30 @@ class CustomARView: ARView {
     convenience init() {
         self.init(frame: UIScreen.main.bounds)
         
-        placeBlueBlock()
+        subscribeToActionStream()
     }
     
-    func placeBlueBlock() {
-        let block = MeshResource.generateBox(size: 1)
-        let material = SimpleMaterial(color: .blue, isMetallic: false)
+    private var cancellables: Set<AnyCancellable> =
+    []
+    
+    func subscribeToActionStream() {
+        ARManager.shared
+            .actionStream
+            .sink { [weak self] action in
+                switch action {
+                    case .placeBlock(let color):
+                        self?.placeBlock(ofColor: color)
+                    case .removeAllAnchors:
+                        self?.scene.anchors.removeAll()
+                }
+                
+            }
+            .store(in: &cancellables)
+    }
+    
+    func placeBlock(ofColor color: Color) {
+        let block = MeshResource.generateBox(size: 0.5)
+        let material = SimpleMaterial(color: UIColor(color), isMetallic: false)
         let entity = ModelEntity(mesh: block, materials: [material])
         
         let anchor = AnchorEntity(plane: .horizontal)

@@ -13,6 +13,8 @@
 		D1D755452C4E6BA50040AB13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D755442C4E6BA50040AB13 /* Preview Assets.xcassets */; };
 		D1D7554D2C4E6C660040AB13 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D7554C2C4E6C660040AB13 /* CustomARView.swift */; };
 		D1D7554F2C4E6E3C0040AB13 /* CustomARViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D7554E2C4E6E3C0040AB13 /* CustomARViewRepresentable.swift */; };
+		D1D755512C4E80A60040AB13 /* ARAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D755502C4E80A60040AB13 /* ARAction.swift */; };
+		D1D755532C4E81410040AB13 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D755522C4E81410040AB13 /* ARManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		D1D755442C4E6BA50040AB13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1D7554C2C4E6C660040AB13 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		D1D7554E2C4E6E3C0040AB13 /* CustomARViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARViewRepresentable.swift; sourceTree = "<group>"; };
+		D1D755502C4E80A60040AB13 /* ARAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAction.swift; sourceTree = "<group>"; };
+		D1D755522C4E81410040AB13 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +78,11 @@
 		D1D7554B2C4E6C2A0040AB13 /* Feature Tragets */ = {
 			isa = PBXGroup;
 			children = (
+				D1D755502C4E80A60040AB13 /* ARAction.swift */,
 				D1D7553F2C4E6BA40040AB13 /* ContentView.swift */,
 				D1D7554C2C4E6C660040AB13 /* CustomARView.swift */,
 				D1D7554E2C4E6E3C0040AB13 /* CustomARViewRepresentable.swift */,
+				D1D755522C4E81410040AB13 /* ARManager.swift */,
 			);
 			path = "Feature Tragets";
 			sourceTree = "<group>";
@@ -152,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D755402C4E6BA40040AB13 /* ContentView.swift in Sources */,
+				D1D755512C4E80A60040AB13 /* ARAction.swift in Sources */,
 				D1D7554D2C4E6C660040AB13 /* CustomARView.swift in Sources */,
 				D1D7553E2C4E6BA40040AB13 /* MyFirstARProjectApp.swift in Sources */,
+				D1D755532C4E81410040AB13 /* ARManager.swift in Sources */,
 				D1D7554F2C4E6E3C0040AB13 /* CustomARViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
